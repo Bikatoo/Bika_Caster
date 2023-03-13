@@ -1,0 +1,31 @@
+server:
+  port: 10416
+  servlet:
+    context-path: /caster
+
+spring:
+  application:
+    name: caster
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: xxxx
+    password: xxxx
+    url: jdbc:mysql://xxxx/xxxx?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    use-ping-method: false
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+      enabled: true
+  redis:
+    host: xxxx
+    password: xxxx
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
